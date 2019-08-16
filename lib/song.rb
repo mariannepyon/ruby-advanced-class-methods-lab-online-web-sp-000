@@ -38,11 +38,11 @@ class Song
   end
 
   def self.new_from_filename
-    self.all.each.do |song|
-      song.name = song.name.split(" - ")
-      name = song.name|1|
-      artist_name = song.name[0]
-    end
+    song = self.new
+      song.name = (name.split(" - ")[1].chomp(".mp3"))
+      song.artist_name = (name.split(" - ")[0])
+    song
+ end
 
 
   def save
