@@ -9,7 +9,7 @@ class Song
 def self.create
   song = self.new
   Song.name = name
-  @@all << song
+  @@all << Song
 end
 
   def save
