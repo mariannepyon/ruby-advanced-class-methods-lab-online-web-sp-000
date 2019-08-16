@@ -37,6 +37,14 @@ class Song
     @@all.sort_by {|x| x.name}
   end
 
+  def self.new_from_filename
+    self.all.each.do |song|
+      song.name = song.name.split(" - ")
+      name = song.name|1|
+      artist_name = song.name[0]
+    end
+  end
+
   def save
     self.class.all << self
   end
