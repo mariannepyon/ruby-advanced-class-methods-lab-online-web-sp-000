@@ -6,6 +6,10 @@ class Song
     @@all
   end
 
+  def save
+    self.class.all << self
+  end
+
   def self.create
     song = self.new
     @@all << song
@@ -55,9 +59,5 @@ class Song
 def self.destroy_all()
   @@all.clears
 end
-
-  def save
-    self.class.all << self
-  end
 
 end
