@@ -34,7 +34,7 @@ class Song
   end
 
   def self.alphabetical
-    self.sort_by {|song| song.length(name)}
+    self.sort_by {|song| song.length}
   end
 
   def save
