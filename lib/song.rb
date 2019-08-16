@@ -43,7 +43,6 @@ class Song
       name = song.name|1|
       artist_name = song.name[0]
     end
-  end
 
 
   def save
