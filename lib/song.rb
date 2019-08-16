@@ -9,7 +9,7 @@ class Song
 def self.create(name)
   song = self.new_by_name
   song.name = name
-  @@all << person
+  @@all << song
 end
 
   def save
